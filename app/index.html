@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="header__content-btn">
-                        <a class="header__btn-login" href="#">Login</a>
+                        <a class="header__btn-login" data-fancybox data-src="#modal" href="javascript:;">Login</a>
                         <a class="header__btn-register" href="#">Register</a>
                     </div>
                 </div>
@@ -66,7 +66,8 @@
                             About Company
                         </div>
                         <div class="footer__content-text">
-                            Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce sitamet urnaiat.Praesent vel rutrum purus.
+                            Praesent vel rutrum purus. Nam vel dui eu risus duis dignissim digniSuspen disse.Fusce sit
+                            amet urnaiat.Praesent vel rutrum purus.
                         </div>
                         <div class="footer__content-adress">
                             PO Box 16122 Collins Street West
@@ -136,6 +137,26 @@
             </div>
         </div>
     </footer>
+
+    <div id="modal">
+        <div class="modal__title">
+            Login
+        </div>
+        <div class="modal__form-inner">
+            <form class="modal__form">
+                <label class="form__name">
+                    <input type="text" autocomplete="off" placeholder="Name">
+                </label>
+                <label class="form__pass">
+                    <input type="password" autocomplete="off" placeholder="Password">
+                </label>
+                <input type="submit" value="SUBMIT">
+                <a class="form__link" href="#">Create an Account</a>
+            </form>
+            <a class="form__lost-pass" href="#">Forgot Password?</a>
+        </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
     <script src="js/main.js"></script>
