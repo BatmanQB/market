@@ -446,6 +446,10 @@ ul{
 .portfolio{
     background: #f4f6f5;
     padding: 100px 0;
+    .item{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 }
 .portfolio__title{
     text-align: center;
@@ -462,8 +466,7 @@ ul{
     border: 1px solid #e7ecf2;
     margin-bottom: 30px;
     position: relative;
-    margin-right: 15px;
-    margin-left: 15px;
+
     &.sale{
         &:before{
             content: "";
@@ -640,6 +643,10 @@ ul{
     font-size: 36px;
     font-weight: 700;
     color: $bg;
+}
+.slick-slide{
+    margin-right: 10px;
+    margin-left: 10px;
 }
   
   

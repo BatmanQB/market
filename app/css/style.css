@@ -581,6 +581,11 @@ ul li {
   padding: 100px 0;
 }
 
+.portfolio .item {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 .portfolio__title {
   text-align: center;
   color: #263238;
@@ -596,8 +601,6 @@ ul li {
   border: 1px solid #e7ecf2;
   margin-bottom: 30px;
   position: relative;
-  margin-right: 15px;
-  margin-left: 15px;
 }
 
 .item.sale:before {
@@ -826,4 +829,9 @@ ul li {
   font-size: 36px;
   font-weight: 700;
   color: #263238;
+}
+
+.slick-slide {
+  margin-right: 10px;
+  margin-left: 10px;
 }
