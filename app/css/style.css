@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0px 15px;
 }
@@ -764,7 +764,7 @@ ul li {
   margin-right: 3px;
   font-size: 14px;
   color: #263238;
-  padding: 10px 20px;
+  padding: 10px 22px;
   font-weight: 500;
   cursor: pointer;
 }
@@ -772,6 +772,8 @@ ul li {
 .portfolio__btn button.mixitup-control-active {
   background-color: #e74c3c;
   color: #fff;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(202, 215, 228, 0.75);
+          box-shadow: 0px 2px 5px 0px rgba(202, 215, 228, 0.75);
 }
 
 .portfolio__link {
@@ -825,7 +827,7 @@ ul li {
 
 .slider__title {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 56px;
   font-size: 36px;
   font-weight: 700;
   color: #263238;
@@ -834,4 +836,149 @@ ul li {
 .slick-slide {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.advantages {
+  padding: 124px 0 110px;
+  background-color: #263238;
+  text-align: center;
+}
+
+.advantages__title {
+  color: #fff;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+
+.advantages__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.advantages__item {
+  margin-right: 40px;
+  margin-left: 40px;
+  width: 320px;
+  cursor: pointer;
+}
+
+.advantages__item:hover .advantages__item-title {
+  color: #8bc34a;
+}
+
+.advantages__item img {
+  width: 113px;
+  height: 113px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.advantages__item-title {
+  color: #fff;
+  font-size: 24px;
+  line-height: 60px;
+  font-weight: 400;
+}
+
+.advantages__item-text {
+  color: #b0bec5;
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.banner {
+  background: #f4f6f5;
+  padding: 130px 0px 137px;
+  text-align: center;
+}
+
+.banner__img {
+  background-image: url(../img/bg_banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1140px;
+  background-position: center center;
+  margin: 0 auto;
+  padding: 110px 50px;
+}
+
+.banner__message {
+  max-width: 660px;
+  width: 100%;
+  padding: 70px 60px 80px;
+  background: #8bc34a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.banner__message a {
+  font-size: 18px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #263238;
+  padding: 14px 42px;
+  background: #fff;
+}
+
+.banner__message-text {
+  color: #fff;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: left;
+  margin-right: 50px;
+}
+
+.banner__message-text span {
+  font-weight: 700;
+}
+
+.tutorials {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.tutorials__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tutorial__item {
+  max-width: 370px;
+  width: 100%;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.tutorial__item img {
+  display: block;
+}
+
+.tutorial__item a {
+  background: #f8f8f8;
+  color: #263238;
+  font-size: 24px;
+  line-height: 60px;
+  font-weight: 700;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.tutorial__item a:hover {
+  background: #8bc34a;
+  color: #fff;
 }
