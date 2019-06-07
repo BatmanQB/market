@@ -773,3 +773,28 @@ ul{
 
 }
 
+//CATALOG PAGE
+.breadcrumbs{
+    padding: 45px 0px 40px;
+    li{
+        display: inline-block;
+        padding-right: 9px;
+        &:after{
+            content: '–';
+            color: $top;
+            margin-left: 9px;
+        }
+        &:last-child{
+            span{
+                color: $bg;
+            }
+            &:after{
+                display: none;
+            }
+        }
+    }
+    a{
+        font-size: 15px;
+        color: #b0bec5;
+    }
+}
