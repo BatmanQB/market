@@ -1,9 +1,9 @@
 let gulp = require('gulp'),
     scss = require('gulp-sass'),
     concat = require('gulp-concat'),
-    uglifyjs = require('gulp-uglifyjs')
+    concatCss = require('gulp-concat-css'),
+    uglifyjs = require('gulp-uglifyjs'),
     cssnano = require('gulp-cssnano'),
-    rename = require('gulp-rename'),
     browserSync =require('browser-sync'),
     autoprefixer = require('gulp-autoprefixer');
 
@@ -17,18 +17,32 @@ gulp.task('scss', function(){
         .pipe(browserSync.reload({stream: true}))
 });
 
+gulp.task('css', function(){
+    return gulp.src(
+        [
+            'node_modules/normalize.css/normalize.css',
+            'node_modules/fancyapps/fancybox/dist/jquery.fancybox.css',
+            'node_modules/slick-carousel/slick/slick.css',
+            'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
+            'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
+            'node_modules/ion-rangeslider/css/ion.rangeSlider.css'
+        ]
+    )
+    .pipe(concatCss('libs.min.css'))
+    .pipe(cssnano())
+    .pipe(gulp.dest('app/css'))
+});
+
 gulp.task('script', function(){
-    return gulp.src(['', ''])
+    return gulp.src([
+        'node_modules/fancyapps/fancybox/dist/jquery.fancybox.js',
+        'node_modules/mixitup/dist/mixitup.js',
+        'node_modules/slick-carousel/slick/slick.js',
+        'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+        'node_modules/ion-rangeslider/js/ion.rangeSlider.js'])
     .pipe(concat('libs.min.js'))
     .pipe(uglifyjs())
     .pipe(gulp.dest('app/js'))
-});
-
-gulp.task('css', function(){
-    return gulp.src('app/css/libs.css')
-    .pipe(cssnano())
-    .pipe(rename({suffix:'.min'}))
-    .pipe(gulp.dest('app/css'))
 });
 
 gulp.task('browser-sync',function(){
@@ -68,5 +82,5 @@ gulp.task('watch', function(){
     gulp.watch(['app/js/main.js', 'app/js/libs.min.js'], gulp.parallel('js'))
 });
 
-gulp.task('default', gulp.parallel('css','script','scss', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('script','css','scss', 'browser-sync', 'watch'));
   
