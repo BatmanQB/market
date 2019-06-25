@@ -123,6 +123,9 @@ ul{
         font-weight: 400;
     }
 }
+.header__menu-btn{
+    display: none;
+}
 
 .footer{
     background-color: $bg;
@@ -396,7 +399,7 @@ ul{
 .search__title{
     font-weight: 700;
     font-size: 48px;
-    line-height: 30px;
+    line-height: 52px;
     color: #fff;
     margin-bottom: 20px;
 }
@@ -462,8 +465,6 @@ ul{
 }
 
 .item{
-    max-width: 400px;
-    width: 100%;
     border: 1px solid #e7ecf2;
     margin-bottom: 30px;
     position: relative;
@@ -644,6 +645,7 @@ ul{
     margin-bottom: 56px;
     font-size: 36px;
     font-weight: 700;
+    line-height: 44px;
     color: $bg;
 }
 .slick-slide{
@@ -749,12 +751,13 @@ ul{
 }
 .tutorials__items{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .tutorial__item{
     max-width: 370px;
     width: 100%;
-    margin-right: 15px;
-    margin-left: 15px;
+    margin: 0 10px 20px;
     img{
         display: block;
     }
@@ -1184,3 +1187,48 @@ ul{
 .jq-number__spin{
     display: none;
 }
+
+//TABS
+.product__inner{
+    display: flex;
+
+}
+.product__content{
+    width: 870px;
+    margin-right: 30px;
+}
+.product__side{
+
+    background: green;
+}
+.product__tabs{
+    border: 1px solid #dfdfdf;
+    .tabs{
+        display: flex;
+        li{
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #dfdfdf;
+            border-right: 1px solid #dfdfdf;
+            margin-right: -1px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 20px;
+            &.current{
+                border-bottom: 3px solid $top;
+                color: #263238;
+                font-weight: 500;
+            }
+        }
+    }
+    .tab-content{
+        display: none;
+        padding: 30px;
+    }
+    .tab-content.current{
+        display: inherit;
+    }
+}
+
+@import 'media'
